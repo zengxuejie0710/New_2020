@@ -10,7 +10,7 @@ def cal():
 
 @pytest.fixture()
 def login(request):
-    print("----------",request.param)
+    print(request.param)
     if request.param[0] == "username":
         return True
     else:
