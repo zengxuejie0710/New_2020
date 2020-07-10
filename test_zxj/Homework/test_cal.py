@@ -14,7 +14,7 @@
 
 import pytest
 import yaml
-
+from test_zxj.Homework.comm import cal
 
 ###使用不同的账号进行登录######
 @pytest.mark.parametrize('login', [('username', 'passwd'),("zzz","jjj")], indirect=True)
@@ -29,26 +29,49 @@ class TestLogin():
     def teardown_class(self):
         print("我是登录后的操作")
 
-
 ######计算器开始计算的测试用例######
-@pytest.mark.parametrize('a,b',yaml.safe_load(open("./testdata.yaml",encoding='utf-8')))
+@pytest.mark.parametrize("param_a",yaml.safe_load(open("./testdata.yaml",encoding='utf-8')),indirect=True,ids=[
+    "正整数",
+    "小数"
+])
+@pytest.mark.parametrize("param_b",yaml.safe_load(open("./testdata.yaml",encoding='utf-8')),indirect=True,ids=[
+    "小数",
+    "数值为0"
+])
+
 class Test_Calculator():
+    cal = cal.Calculator()
     @pytest.mark.add
-    def test_add(self, cal,a, b):
+    def test_add(self, param_a,param_b):
+        a=param_a
+        b=param_b
         print("a+b",a+b)
-        return a + b
+        result=a+b
+        assert result == self.cal.add(a,b)
     @pytest.mark.sub
-    def test_sub(self,cal,a,b):
-        print("a-b",a-b)
-        return a - b
+    def test_sub(self,param_a,param_b):
+        a=param_a
+        b=param_b
+        print("a+b",a-b)
+        result=a-b
+        assert result == self.cal.sub(a,b)
     @pytest.mark.div
-    def test_div(self,cal, a, b):
-        print("a-b",a/b)
-        return a / b
+    def test_div(self,param_a,param_b):
+        a=param_a
+        b=param_b
+        # print("a+b",a / b)
+        try:
+            result = a / b
+            assert result == self.cal.div(a,b)
+        except :
+            return "除数不能为0"
     @pytest.mark.mul
-    def test_mul(self,cal,a,b):
-        print('a*b',a*b)
-        return a * b
+    def test_mul(self,param_a,param_b):
+        a=param_a
+        b=param_b
+        print("a+b",a * b)
+        result=a * b
+        assert result == self.cal.mul(a,b)
 
 if __name__=="__main__":
     pytest.main(['-s', 'test_cal.py'])
