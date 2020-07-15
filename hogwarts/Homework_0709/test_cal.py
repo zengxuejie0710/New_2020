@@ -14,7 +14,7 @@
 
 import pytest
 import yaml
-from test_zxj.Homework.comm import cal
+from hogwarts.Homework_0709.comm import cal
 
 ###使用不同的账号进行登录######
 @pytest.mark.parametrize('login', [('username', 'passwd'),("zzz","jjj")], indirect=True)
@@ -30,11 +30,11 @@ class TestLogin():
         print("我是登录后的操作")
 
 ######计算器开始计算的测试用例######
-@pytest.mark.parametrize("param_a",yaml.safe_load(open("./testdata.yaml",encoding='utf-8')),indirect=True,ids=[
+@pytest.mark.parametrize("param_a", yaml.safe_load(open("testdata.yml", encoding='utf-8')), indirect=True, ids=[
     "正整数",
     "小数"
 ])
-@pytest.mark.parametrize("param_b",yaml.safe_load(open("./testdata.yaml",encoding='utf-8')),indirect=True,ids=[
+@pytest.mark.parametrize("param_b", yaml.safe_load(open("testdata.yml", encoding='utf-8')), indirect=True, ids=[
     "小数",
     "数值为0"
 ])
@@ -74,5 +74,5 @@ class Test_Calculator():
         assert result == self.cal.mul(a,b)
 
 if __name__=="__main__":
-    pytest.main(['-s', 'test_cal.py'])
+    pytest.main(['-vs', 'test_cal.py'])
 
