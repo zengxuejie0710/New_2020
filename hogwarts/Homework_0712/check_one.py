@@ -8,7 +8,7 @@ from hogwarts.Homework_0712.cal import Calculator
 
 
 
-with open("testdata.yml") as f:
+with open("testdata.yml",encoding='utf-8') as f:
     data = yaml.safe_load(f)
     #加法的数据
     adddata = data['add'].values()
@@ -52,4 +52,4 @@ class Check_Calculator():
             return "除数不能为0"
 
 if __name__=="__main__":
-    pytest.main(['-vs', 'test_driver.py'])
+    pytest.main(['-vs', 'check_one.py'])
