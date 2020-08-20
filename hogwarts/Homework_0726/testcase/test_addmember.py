@@ -6,11 +6,11 @@ from hogwarts.Homework_0726.app.app import APP
 import pytest
 
 
-with open("../yaml/testdata.yml",encoding="utf-8") as f:
+with open("../dates/testdata.yml", encoding="utf-8") as f:
     getdata = yaml.safe_load(f)
 
 
-with open("../yaml/deledata.yml",encoding="utf-8") as f:
+with open("../dates/deledata.yml", encoding="utf-8") as f:
     deldata = yaml.safe_load(f)
 
 class TestCase:

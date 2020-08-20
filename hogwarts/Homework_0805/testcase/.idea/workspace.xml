@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ca7423b7-63c4-4bae-b3eb-7297c23ee212" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/app/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/basepage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/basepage/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/basepage/handlerblack.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/page/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/page/mainpage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/page/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/testcase/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_0730/testcase/test_xuqiu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/anl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/base_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/handle_black.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/main.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/market.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/market.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../page/search.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/testcase.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_xueqiu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_20200814/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Homework_20200814/mitmproxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework_0726/basepage/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_0726/basepage/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework_0726/testcase/test_addmember.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_0726/testcase/test_addmember.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework_0726/yaml/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_0726/dates/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework_0726/yaml/deledata.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_0726/dates/deledata.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Homework_0726/yaml/testdata.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Homework_0726/dates/testdata.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1g519OPy9YJImXltn40xaUXyie9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca7423b7-63c4-4bae-b3eb-7297c23ee212" name="Default Changelist" comment="" />
+      <created>1597389486433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597389486433</updated>
+    </task>
+    <servers />
+  </component>
+</project>
