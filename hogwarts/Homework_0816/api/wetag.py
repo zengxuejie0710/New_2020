@@ -13,7 +13,7 @@ class WeTag(BaseApi):
     def __init__(self):
         self.token = Util().get_token()
         self.params["token"] = self.token
-        with open("../api/wetag.yaml", encoding="utf-8") as f:
+        with open("../datas/wetag.yaml", encoding="utf-8") as f:
             self.data = yaml.safe_load(f)
 
     def test_create(self, tagname,tagid):

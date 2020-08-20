@@ -11,7 +11,7 @@ class Util():
          https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ww1cfe02ff5dc2522a&corpsecret=-DNMkpbtJdncAuQ15DqZAxEdaNM88oEZADuHJAnZIts
         :return:
         """
-        with open("../api/wetag.yaml", encoding="utf-8") as f:
+        with open("../datas/wetag.yaml", encoding="utf-8") as f:
             data = yaml.safe_load(f)
         r = requests.get("https://qyapi.weixin.qq.com/cgi-bin/gettoken",params=data["get_token"])
         return r.json()['access_token']
