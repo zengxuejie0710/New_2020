@@ -1,9 +1,8 @@
 # coding:utf-8
-import time
 
+import time
 from YXTX.common.base import Base
 from appium import webdriver
-
 from YXTX.page.order import SearchOrder
 
 

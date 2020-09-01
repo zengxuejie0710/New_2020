@@ -1,5 +1,6 @@
 import pytest
 
+
 def pytest_collection_modifyitems(items):
     """
     测试用例收集完成时，将收集到的item的name和nodeid的中文显示在控制台上
