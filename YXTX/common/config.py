@@ -1,9 +1,9 @@
 # coding:utf-8
 
-import time
-from YXTX.common.base import Base
+
+from common.base import Base
 from appium import webdriver
-from YXTX.page.order import SearchOrder
+from page.order import SearchOrder
 
 
 class App(Base):
@@ -31,6 +31,14 @@ class App(Base):
         # 回到这个页面的目的是为了调用该也页面下的其他函数，如果不返回self则不能调用到goto_index这个函数
         return self
 
+    def stop(self):
+        """
+        关闭app
+        :return:
+        """
+        self.driver.quit()
+
+
     def goto_index(self):
         """
         进入到首页
@@ -38,10 +46,4 @@ class App(Base):
         """
         return SearchOrder(self.driver)
 
-    def app_quit(self):
-        """
-        关闭app
-        :return:
-        """
-        self.driver.quit()
-        time.sleep(5)
+

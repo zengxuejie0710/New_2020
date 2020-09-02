@@ -1,8 +1,7 @@
 # coding:utf-8
 
-from YXTX.common.base import Base
+from common.base import Base
 import time
-import logging
 import re
 
 

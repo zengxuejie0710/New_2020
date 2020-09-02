@@ -1,6 +1,6 @@
 # coding:utf-8
 
-from appium import webdriver
+
 from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.common.touch_action import TouchAction
 from appium.webdriver.webdriver import WebDriver
@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
 import re
-import yaml
+
 class Base:
     def __init__(self, driver: WebDriver = None):
         self.driver = driver
@@ -423,3 +423,5 @@ class Base:
             return True
         else:
             return False
+
+
