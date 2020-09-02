@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github0901" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b785c62b-db5a-488f-a945-39639fd27a6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/YXTX.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datas/yxtx_data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/datas/yxtx_data.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/order.py" afterDir="false" />
+    <list default="true" id="b785c62b-db5a-488f-a945-39639fd27a6a" name="Default Changelist" comment="第三次提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/test001.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test001.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.test001">
+  <component name="RunManager" selected="Python tests.pytest in test001.py">
     <configuration name="test001" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="YXTX" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,9 +103,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test001.py" />
         <item itemvalue="Python.test001" />
         <item itemvalue="Python tests.pytest for test001.TestSearchReservation.test01" />
-        <item itemvalue="Python tests.pytest in test001.py" />
       </list>
     </recent_temporary>
   </component>
@@ -108,24 +120,55 @@
       <option name="presentableId" value="Default" />
       <updated>1598929576039</updated>
     </task>
+    <task id="LOCAL-00001" summary="第三次提交">
+      <created>1599029044920</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599029044920</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第三次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第三次提交" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1259" height="71" key="GridCell.Tab.0.bottom" timestamp="1599028768543">
+    <state x="514" y="238" width="252" height="296" key="Github.ShareDialog" timestamp="1599029497304">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="71" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1599028768543" />
-    <state width="1259" height="71" key="GridCell.Tab.0.center" timestamp="1599028768543">
+    <state x="514" y="238" width="252" height="296" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1599029497304" />
+    <state width="1259" height="235" key="GridCell.Tab.0.bottom" timestamp="1599031824535">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="71" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1599028768543" />
-    <state width="1259" height="71" key="GridCell.Tab.0.left" timestamp="1599028768542">
+    <state width="1259" height="235" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1599031824535" />
+    <state width="1259" height="235" key="GridCell.Tab.0.center" timestamp="1599031824535">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="71" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1599028768542" />
-    <state width="1259" height="71" key="GridCell.Tab.0.right" timestamp="1599028768543">
+    <state width="1259" height="235" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1599031824535" />
+    <state width="1259" height="235" key="GridCell.Tab.0.left" timestamp="1599031824534">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="71" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1599028768543" />
+    <state width="1259" height="235" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1599031824534" />
+    <state width="1259" height="235" key="GridCell.Tab.0.right" timestamp="1599031824535">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="235" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1599031824535" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1599029596287">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599029596287" />
   </component>
 </project>
