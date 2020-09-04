@@ -1,7 +1,7 @@
 # coding:utf-8
-
 from common.base import Base
 import time
+import logging
 import re
 
 
@@ -39,17 +39,26 @@ class SearchOrder(Base):
         self.send_key('xpath', '//android.widget.EditText[@text="出发站(如北京/beijing/bj)"]', start)
         # 点击第一个选项
         time.sleep(2)
-        self.click_element('xpath',
-                           '//android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view'
-                           '.ViewGroup/android.view.ViewGroup[1]')
+        try:
+            a = self.find_element('xpath', '//android.view.ViewGroup[3]/android.widget.ScrollView/android.view.'
+                                           'ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]')
+        except:
+            print('失败原因：出发站未开通')
+        else:
+            a.click()
         time.sleep(2)
         # 输入到达站
         self.send_key('xpath', '//android.widget.EditText[@text="到达站(如北京/beijing/bj)"]', end)
         # 点击第一个选项
         time.sleep(2)
-        self.click_element('xpath',
-                           '//android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.view'
-                           '.ViewGroup/android.view.ViewGroup[1]')
+        try:
+            b = self.find_element('xpath','//android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup'
+                                          '/android.view.ViewGroup/android.view.ViewGroup[1]')
+        except:
+            print("失败原因：到达站未开通")
+        else:
+            b.click()
+
         # 点击汽车票查询
         self.click_element('xpath', '//android.widget.TextView[@text="汽车票查询"]')
         time.sleep(2)
@@ -65,7 +74,7 @@ class SearchOrder(Base):
             print('所选日期存在班次')
             pass
         else:
-            print('选择后天的班次')
+            print('明天无班次，尝试选择后天的班次')
             self.click_element('xpath', '//*[@text="后天"]/../..')
         time.sleep(2)
         # 点击第一趟车
@@ -80,7 +89,7 @@ class SearchOrder(Base):
         try:
             self.find_element("xpath", "//*[@text='订单填写']")
         except:
-            print('进入班次详情失败')
+            print('失败原因：进入班次详情失败')
         else:
             print('以下为班次详情页面校验')
             pass

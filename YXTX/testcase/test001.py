@@ -3,7 +3,7 @@ from common.config import App
 import pytest
 import yaml
 import os
-
+import allure
 def get_root_dir():
     return os.path.dirname(os.path.dirname(__file__))
 
@@ -25,9 +25,11 @@ class TestSearchReservation:
 
     @pytest.mark.parametrize("start,end",testdata)
     def test01(self,start,end):
-        first_step = self.app.goto_index()
-        first_step.isexit_order()
-        first_step.deparstaion(start, end)
+        with allure.step("进入首页"):
+            first_step = self.app.goto_index()
+        with allure.step("判断是否存在未支付的订单"):
+            first_step.isexit_order()
+        # first_step.deparstaion(start, end)
         # origin_stop = first_step.verity_start()
         # arrival_stop = first_step.verity_end()
         # amount, serve = first_step.getsum()
