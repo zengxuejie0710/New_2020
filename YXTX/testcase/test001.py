@@ -25,6 +25,7 @@ class TestSearchReservation:
 
     @pytest.mark.parametrize("start,end",testdata)
     def test01(self,start,end):
+
         with allure.step("进入首页"):
             first_step = self.app.goto_index()
         with allure.step("判断是否存在未支付的订单"):
@@ -44,3 +45,5 @@ class TestSearchReservation:
         # assert (adress)
         # assert (phone)
         # assert (result)
+
+

@@ -11,6 +11,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
 import re
+import allure
+
 
 class Base:
     def __init__(self, driver: WebDriver = None):
@@ -424,3 +426,21 @@ class Base:
         else:
             return False
 
+    #保存截图
+    def save_screenshot(self):
+        '''
+        页面截屏保存截图
+        :param img_doc: 截图说明
+        :return:
+        '''
+
+        # file_name = OUTPUTS_DIR + "\\{}_{}.png".format(datetime.strftime(datetime.now(), "%Y%m%d%H%M%S"), img_doc)
+        nowtime = time.strftime("%Y%m%d.%H.%M.%S")
+        # t = self.driver.get_screenshot_as_file('%s.jpg' % nowtime)
+        # print('截图结果', t)
+        png =self.driver.save_screenshot('%s.jpg' % nowtime)
+        with open(png, mode='rb') as f:
+            file = f.read()
+        # allure.attach(file, img_doc, allure.attachment_type.PNG)
+        allure.attach(file, attachment_type=allure.attachment_type.PNG)
+        # case_logger.info("页面截图文件保存在：{}".format(file_name))
