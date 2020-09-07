@@ -61,7 +61,6 @@ class App(Base):
         对当前页面进行截图
         :return:
         """
-        # start_time = time.time()
         start_time = time.strftime("%Y%m%d.%H.%M.%S")
         filename = '{}.png'.format(start_time)
         file_path = os.path.join(error_img, filename)

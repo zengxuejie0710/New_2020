@@ -24,28 +24,44 @@ class TestSearchReservation:
 
 
     @pytest.mark.parametrize("start,end",testdata)
+    @allure.feature("YXTX测试用例执行")
+    @allure.story("始发站-到达站")
     def test01(self,start,end,):
+        """
+        用例描述：
+        用例步骤：
+            1.进入app首页
+            2.判断是否存在未支付的订单
+        :param start:
+        :param end:
+        :return:
+        """
         try:
 
-            with allure.step("进入首页"):
+            with allure.step("进入app首页"):
                 first_step = self.app.goto_index()
             with allure.step("判断是否存在未支付的订单"):
                 first_step.isexit_order()
-            first_step.deparstaion(start, end)
-            origin_stop = first_step.verity_start()
-            arrival_stop = first_step.verity_end()
-            amount, serve = first_step.getsum()
-            # first_step.now_pay()
-            # first_step.order_context()
-            # adress = first_step.is_adress()
-            # phone = first_step.is_phone()
-            # result = first_step.cancal_order()
-            # assert (origin_stop)
-            # assert (arrival_stop)
+            with allure.step("输入出发站和到达站地址"):
+                first_step.deparstaion(start, end)
+            with allure.step("获取页面地址,金额"):
+                origin_stop = first_step.verity_start()
+                arrival_stop = first_step.verity_end()
+                amount, serve = first_step.getsum()
+            with allure.step("点击立即支付按钮"):
+                first_step.now_pay()
+            with allure.step("看订单信息内容"):
+                first_step.order_context()
+            with allure.step("获取乘车地址,电话,取消订单"):
+                adress = first_step.is_adress()
+                phone = first_step.is_phone()
+                result = first_step.cancal_order()
+            assert (origin_stop)
+            assert (arrival_stop)
             assert (amount != serve)
-            # assert (adress)
-            # assert (phone)
-            # assert (result)
+            assert (adress)
+            assert (phone)
+            assert (result)
 
         except Exception as msg:
             print(u"异常原因%s" % msg)
