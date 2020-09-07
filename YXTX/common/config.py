@@ -4,6 +4,15 @@
 from common.base import Base
 from appium import webdriver
 from page.order import SearchOrder
+import pytest
+import time
+import os
+from logging import log
+import allure
+#获取当前路径
+cur_path = os.path.dirname(os.path.realpath(__file__))
+#进入到report路径
+error_img = os.path.join(os.path.dirname(cur_path),'report')
 
 
 class App(Base):
@@ -11,7 +20,8 @@ class App(Base):
     壹行天下app配置
     :return:
     """
-    def start(self):
+
+    def startapp(self):
         if self.driver == None:
             caps = {}
             caps["platformName"] = "android"
@@ -46,4 +56,24 @@ class App(Base):
         """
         return SearchOrder(self.driver)
 
+    def save_scree_image(self):
+        """
+        对当前页面进行截图
+        :return:
+        """
+        start_time = time.time()
+        filename = '{}.png'.format(start_time)
+        file_path = os.path.join(error_img, filename)
+        self.driver.save_screenshot(file_path)
+        log.info("错误页面截图成功，图表保存的路径:{}".format(file_path))
+        return file_path
 
+    def save_image_to_allure(self):
+        """
+        保存失败的截图到allure报告中
+        :return:
+        """
+        file_path = self.save_scree_image()
+        with open(file_path, "rb") as f:
+            file = f.read()
+            allure.attach(file, "失败截图", allure.attachment_type.PNG)
