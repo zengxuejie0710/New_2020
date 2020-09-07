@@ -46,8 +46,11 @@ class TestSearchReservation:
             # assert (adress)
             # assert (phone)
             # assert (result)
-        except:
+
+        except Exception as msg:
+            print(u"异常原因%s" % msg)
             self.app.save_image_to_allure()
+            raise
 
 
 

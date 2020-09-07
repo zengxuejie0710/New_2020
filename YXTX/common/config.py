@@ -7,7 +7,7 @@ from page.order import SearchOrder
 import pytest
 import time
 import os
-from logging import log
+import logging
 import allure
 #获取当前路径
 cur_path = os.path.dirname(os.path.realpath(__file__))
@@ -61,11 +61,12 @@ class App(Base):
         对当前页面进行截图
         :return:
         """
-        start_time = time.time()
+        # start_time = time.time()
+        start_time = time.strftime("%Y%m%d.%H.%M.%S")
         filename = '{}.png'.format(start_time)
         file_path = os.path.join(error_img, filename)
         self.driver.save_screenshot(file_path)
-        log.info("错误页面截图成功，图表保存的路径:{}".format(file_path))
+        logging.info("错误页面截图成功，图表保存的路径:{}".format(file_path))
         return file_path
 
     def save_image_to_allure(self):
