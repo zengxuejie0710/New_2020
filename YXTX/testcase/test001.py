@@ -12,6 +12,8 @@ print(get_root_dir())
 with open(get_root_dir() + '/datas/yxtx_data.yaml', encoding="utf-8")as f:
     testdata = yaml.safe_load(f)
 
+@allure.feature("YXTX测试用例执行")
+@allure.story("始发站-到达站")
 class TestSearchReservation:
 
     def setup(self):
@@ -22,8 +24,6 @@ class TestSearchReservation:
         print('* * * End * * *')
         self.app.stop()
 
-    @allure.feature("YXTX测试用例执行")
-    @allure.story("始发站-到达站")
     @pytest.mark.parametrize("start,end",testdata)
     def test01(self,start,end,):
         """
