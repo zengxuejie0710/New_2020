@@ -32,6 +32,11 @@ class TestSearchReservation:
         用例步骤：
             1.进入app首页
             2.判断是否存在未支付的订单
+            3.输入出发站和到达站地址
+            4.获取页面地址,金额
+            5.点击立即支付按钮
+            6.看订单信息内容
+            7.获取乘车地址,电话,取消订单
         :param start:
         :param end:
         :return:
