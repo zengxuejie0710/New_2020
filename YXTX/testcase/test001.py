@@ -22,10 +22,9 @@ class TestSearchReservation:
         print('* * * End * * *')
         self.app.stop()
 
-
-    @pytest.mark.parametrize("start,end",testdata)
     @allure.feature("YXTX测试用例执行")
     @allure.story("始发站-到达站")
+    @pytest.mark.parametrize("start,end",testdata)
     def test01(self,start,end,):
         """
         用例描述：
