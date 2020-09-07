@@ -11,8 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
 import re
-import allure
-from  common.handlerblack import handle_black
+
 
 class Base:
     def __init__(self, driver: WebDriver = None):
@@ -434,5 +433,5 @@ class Base:
         else:
             return False
 
-    #保存截图
+
 
