@@ -24,7 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b785c62b-db5a-488f-a945-39639fd27a6a" name="Default Changelist" comment="第14次提交">
+    <list default="true" id="b785c62b-db5a-488f-a945-39639fd27a6a" name="Default Changelist" comment="第15次提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/test001.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test001.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hogwarts/Homework_0730/basepage/handlerblack.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hogwarts/Homework_0730/basepage/handlerblack.py" afterDir="false" />
@@ -249,7 +249,21 @@
       <option name="project" value="LOCAL" />
       <updated>1599451203615</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="第15次提交">
+      <created>1599455827339</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1599455827339</updated>
+    </task>
+    <task id="LOCAL-00015" summary="第15次提交">
+      <created>1599455974262</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1599455974262</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,7 +291,8 @@
     <MESSAGE value="第12次提交" />
     <MESSAGE value="第13次提交" />
     <MESSAGE value="第14次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第14次提交" />
+    <MESSAGE value="第15次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第15次提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="389" y="141" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599203350557">
@@ -316,10 +331,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1599032307544" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1599451217268">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1599455982462">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599451217268" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599455982462" />
     <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599123794389">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
