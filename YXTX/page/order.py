@@ -10,7 +10,7 @@ class SearchOrder(Base):
 
     # 进入首页后判断是否存在待支付订单
     def isexit_order(self):
-        self.driver.implicitly_wait(20)
+        self.driver.implicitly_wait(10)
         try:
             # 点击X关闭弹窗
             click_x = self.driver.find_element_by_xpath(
@@ -21,12 +21,12 @@ class SearchOrder(Base):
         else:
             print('存在待支付订单—>取消此订单')
             click_x.click()
-            # 点击首页的订单按钮
-            self.click_element("xpath", "//*[@text='订单']/../../*[@class='android.view.ViewGroup'][3]")
-            SearchOrder.order_context(self)
-            SearchOrder.cancal_order(self)
+            # # 点击首页的订单按钮
+            # self.click_element("xpath", "//*[@text='订单']/../../*[@class='android.view.ViewGroup'][3]")
+            # SearchOrder.order_context(self)
+            # SearchOrder.cancal_order(self)
+            # self.click_element("xpath", "//*[@text='再买一单']")
 
-            self.click_element("xpath", "//*[@text='再买一单']")
 
     def deparstaion(self, start, end):
         # 点击出发站
@@ -218,13 +218,15 @@ class SearchOrder(Base):
         # 点击确定
         self.click_element('xpath', "//*[@resource-id='android:id/button1']")
         # result1 = self.find_toast("解锁失败，稍后系统会自动解锁新订单")
-        result = self.find_toast("订单取消")
-        if result:
-            print("订单取消成功")
-            return result  # 返回toast
+        return self.find_toast("订单取消")
+        # if result:
+        #     print("订单取消成功")
+        #     return result  # 返回toast
+        # else:
+        #     print("取消订单失败")
+        #     self.driver.back()
+        #     # 点击预订
+        #     self.click_element("xpath", "//*[@text='预订']/../*[@class='android.view.ViewGroup']")
+        #     return SearchOrder.isexit_order(self)
 
-        else:
-            print("取消订单失败")
-            self.driver.back()
-            # 点击预订
-            self.click_element("xpath", "//*[@text='预订']/../*[@class='android.view.ViewGroup']")
+

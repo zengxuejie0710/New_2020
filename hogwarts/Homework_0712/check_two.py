@@ -3,7 +3,7 @@
 
 import pytest
 import yaml
-from hogwarts.Homework_0712.cal import Calculator
+from Homework_0712.cal import Calculator
 
 
 # 控制测试用例顺序按照【加-减-乘-除】这个顺序执行,

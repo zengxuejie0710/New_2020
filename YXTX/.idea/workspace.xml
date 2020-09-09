@@ -24,9 +24,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b785c62b-db5a-488f-a945-39639fd27a6a" name="Default Changelist" comment="第15次提交">
+    <list default="true" id="b785c62b-db5a-488f-a945-39639fd27a6a" name="Default Changelist" comment="第16次提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datas/yxtx_data.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/datas/yxtx_data.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testcase/test001.py" beforeDir="false" afterPath="$PROJECT_DIR$/testcase/test001.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hogwarts/Homework_0712/check_one.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hogwarts/Homework_0712/check_one.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hogwarts/Homework_0712/check_two.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hogwarts/Homework_0712/check_two.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hogwarts/Homework_0730/basepage/handlerblack.py" beforeDir="false" afterPath="$PROJECT_DIR$/../hogwarts/Homework_0730/basepage/handlerblack.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +67,7 @@
       <recent name="D:\Tools\pycharm_2020\New_2020\YXTX\page" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test001.py">
+  <component name="RunManager" selected="Python.test001">
     <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="YXTX" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,10 +144,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test001" />
         <item itemvalue="Python tests.pytest in test001.py" />
         <item itemvalue="Python.config" />
         <item itemvalue="Python tests.pytest for test001.TestSearchReservation.test01" />
-        <item itemvalue="Python.test001" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599455974262</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="第16次提交">
+      <created>1599456630759</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1599456630759</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,7 +303,8 @@
     <MESSAGE value="第13次提交" />
     <MESSAGE value="第14次提交" />
     <MESSAGE value="第15次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第15次提交" />
+    <MESSAGE value="第16次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第16次提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="389" y="141" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599203350557">
@@ -303,38 +315,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1599451182960" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1599199337250">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1599623241789">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1599199337250" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1599623241789" />
     <state x="514" y="238" width="252" height="296" key="Github.ShareDialog" timestamp="1599032195092">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="514" y="238" width="252" height="296" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1599032195092" />
-    <state width="1259" height="202" key="GridCell.Tab.0.bottom" timestamp="1599449096719">
+    <state width="1259" height="161" key="GridCell.Tab.0.bottom" timestamp="1599644493313">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="202" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1599449096719" />
-    <state width="1259" height="202" key="GridCell.Tab.0.center" timestamp="1599449096719">
+    <state width="1259" height="161" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1599644493313" />
+    <state width="1259" height="161" key="GridCell.Tab.0.center" timestamp="1599644493313">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="202" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1599449096719" />
-    <state width="1259" height="202" key="GridCell.Tab.0.left" timestamp="1599449096718">
+    <state width="1259" height="161" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1599644493313" />
+    <state width="1259" height="161" key="GridCell.Tab.0.left" timestamp="1599644493313">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="202" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1599449096718" />
-    <state width="1259" height="202" key="GridCell.Tab.0.right" timestamp="1599449096719">
+    <state width="1259" height="161" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1599644493313" />
+    <state width="1259" height="161" key="GridCell.Tab.0.right" timestamp="1599644493313">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="202" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1599449096719" />
+    <state width="1259" height="161" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1599644493313" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1599032307544">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1599032307544" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1599455982462">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1599456639689">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599455982462" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1599456639689" />
     <state x="438" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599123794389">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

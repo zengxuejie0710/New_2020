@@ -4,7 +4,7 @@
 # 2、修改测试用例为check_开头，修改测试用例的执行规则，执行所有check_开头和test_开头的测试用例
 import pytest
 import yaml
-from hogwarts.Homework_0712.cal import Calculator
+from Homework_0712.cal import Calculator
 
 
 

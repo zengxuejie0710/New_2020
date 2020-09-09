@@ -10,6 +10,10 @@ def get_root_dir():
 
 with open(get_root_dir() + '/datas/yxtx_data.yaml', encoding="utf-8")as f:
     testdata = yaml.safe_load(f)
+    city = testdata.keys()
+    start_end = testdata.values()
+
+
 
 
 @allure.feature("YXTX测试用例")
@@ -21,10 +25,9 @@ class TestSearchReservation:
     def teardown(self):
         print('* * * End * * *')
         self.app.stop()
-        self.app.stop()
 
     @allure.story("始发站-到达站")
-    @pytest.mark.parametrize("start,end",testdata)
+    @pytest.mark.parametrize("start,end",testdata,ids=city)
     def test01(self,start,end,):
         """
         用例描述：
@@ -62,7 +65,7 @@ class TestSearchReservation:
                 result = first_step.cancal_order()
             assert (origin_stop)
             assert (arrival_stop)
-            assert (amount != serve)
+            assert (amount == serve)
             assert (adress)
             assert (phone)
             assert (result)
@@ -71,6 +74,5 @@ class TestSearchReservation:
             print(u"异常原因%s" % msg)
             self.app.save_image_to_allure()
             raise
-
 
 
