@@ -47,7 +47,7 @@ class TestSearchReservation:
         """
 
         try:
-            with allure.step("始发站--->到达站"):
+            with allure.step(f'"始发站:{start}--->到达站:{end}"'):
                 print(start + '--->' + end)
             with allure.step("进入app首页"):
                 first_step = self.app.goto_index()
