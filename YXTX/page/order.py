@@ -10,7 +10,7 @@ class SearchOrder(Base):
 
     # 进入首页后判断是否存在待支付订单
     def isexit_order(self):
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(20)
         try:
             # 点击X关闭弹窗
             click_x = self.driver.find_element_by_xpath(
@@ -27,18 +27,17 @@ class SearchOrder(Base):
             # SearchOrder.cancal_order(self)
             # self.click_element("xpath", "//*[@text='再买一单']")
 
-
     def deparstaion(self, start, end):
         # 点击出发站
         self.click_element('xpath', "//*[@text='出发城市']/..//*[@class='android.widget.TextView'][2]")
         # 清空输入框
-        time.sleep(2)
+        # time.sleep(2)
         self.clear_ele('xpath', '//android.view.ViewGroup[1]/android.widget.EditText')
-        time.sleep(2)
+        # time.sleep(2)
         # 输入出发站
         self.send_key('xpath', '//android.widget.EditText[@text="出发站(如北京/beijing/bj)"]', start)
         # 点击第一个选项
-        time.sleep(2)
+        # time.sleep(2)
         try:
             a = self.find_element('xpath', '//android.view.ViewGroup[3]/android.widget.ScrollView/android.view.'
                                            'ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]')
@@ -46,11 +45,11 @@ class SearchOrder(Base):
             print('失败原因：出发站未开通')
         else:
             a.click()
-        time.sleep(2)
+        # time.sleep(2)
         # 输入到达站
         self.send_key('xpath', '//android.widget.EditText[@text="到达站(如北京/beijing/bj)"]', end)
         # 点击第一个选项
-        time.sleep(2)
+        # time.sleep(2)
         try:
             b = self.find_element('xpath','//android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup'
                                           '/android.view.ViewGroup/android.view.ViewGroup[1]')
@@ -61,10 +60,10 @@ class SearchOrder(Base):
 
         # 点击汽车票查询
         self.click_element('xpath', '//android.widget.TextView[@text="汽车票查询"]')
-        time.sleep(2)
+        # time.sleep(2)
         # 点击明天
         self.click_element('xpath', '//android.widget.TextView[@text="明天"]')
-        time.sleep(1)
+        # time.sleep(1)
         # 如果存在班次点击第一趟车，不存在点后天
         try:
             # 无班次时获取的元素
@@ -76,7 +75,7 @@ class SearchOrder(Base):
         else:
             print('明天无班次，尝试选择后天的班次')
             self.click_element('xpath', '//*[@text="后天"]/../..')
-        time.sleep(2)
+        # time.sleep(2)
         # 点击第一趟车
         try:
             car = self.find_element("xpath", "//android.widget.ScrollView/android.view.ViewGroup/"
@@ -85,7 +84,7 @@ class SearchOrder(Base):
             print("当前页面无班次")
         else:
             car.click()
-        time.sleep(2)
+        # time.sleep(2)
         try:
             self.find_element("xpath", "//*[@text='订单填写']")
         except:
@@ -124,17 +123,17 @@ class SearchOrder(Base):
 
     def getsum(self):
         # 获取票价金额
-        a = self.driver.find_element('xpath', '//android.view.ViewGroup[2]/android.widget.TextView[2]').text
+        a = self.find_element('xpath', '//android.view.ViewGroup[2]/android.widget.TextView[2]').text
         price = a.split("￥")[1]
         # 获取总金额
-        c = self.driver.find_element('xpath',
+        c = self.find_element('xpath',
                                      '//android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup['
                                      '1]/android.view.ViewGroup/android.widget.TextView[2]').text
         totalamout = c.split("￥")[1]
         # 获取服务费
         try:
             # 如果存在服务费就返回 票价金额+服务费、总金额的值
-            b = self.driver.find_element('xpath', '//android.view.ViewGroup[5]/android.widget.TextView[2]').text
+            b = self.find_element('xpath', "//*[@text='服务费']/..//*[@class='android.widget.TextView'][2]").text
             serve = b.split('￥')[1].split('x')[0]
             amount_serve = float(price) + float(serve)
             print('票价为：', price, '元')
@@ -153,18 +152,19 @@ class SearchOrder(Base):
     def now_pay(self):
         # 点击立即支付#
         self.click_element("xpath", "//*[@text='立即支付']")
+        # time.sleep(3)
         try:
             # 存在不需要按钮时就点击(是否存在保险)
-            no_need = self.driver.find_element_by_xpath("//*[@text='不需要']")
+            no_need = self.find_element("xpath", "//*[@text='不需要']")
             print("该车站存在保险")
         except:
             # 不存在时就跳过
             print("该车站不存在保险")
         else:
             no_need.click()
-            time.sleep(5)
+            time.sleep(3)
         finally:
-            time.sleep(5)
+            time.sleep(3)
             self.driver.back()
 
     # 查看订单信息内容
@@ -180,36 +180,49 @@ class SearchOrder(Base):
     def is_adress(self):
         try:
             # 如果存在发车地址就执行else
-            self.driver.find_element("xpath", "//*[@text='发车地址 :']")
+            self.find_element("xpath", "//*[@text='发车地址 :']")
         except:
             # 不存在发车地址返回True
             print("该站点不存在发车地址")
             return True
         else:
             try:
-                # 如果存在发车地址就点击地址进入导航页面
-                self.click_element("xpath", "//*[@text='发车地址 :']/..//*[@class='android.view.ViewGroup'][1]")
-                self.driver.find_element("xpath", "//*[@text='开始导航']")
-                time.sleep(2)
-                self.driver.back()
-                print("获取地址正常，点击发车地址可进入导航页面")
-                return True
+                text1 = self.find_element("xpath",'//*[@text="发车地址 :"]/../*[@class="android.view.ViewGroup"][1]/*[@class="android.widget.TextView"]').text
+                result =self.is_chinses(text1)
+                if result:
+                    print("发车地址：",text1)
+                    return self.is_chinses(text1)
+                else:
+                    text2 = self.find_element("xpath","//*[@text='发车地址 :']/../*[@class='android.widget.TextView'][2]").text
+                    print("发车地址：",text2)
+                    return self.is_chinses(text2)
             except:
-                print("存在发车地址，但信息为空或有误")
-                return False
+                text3 = self.find_element("xpath", "//*[@text='发车地址 :']/..//*[@class='android.widget.TextView'][2]").text
+                if text3 == "联系电话 :":
+                    text4 = self.find_element("xpath",
+                                              '//*[@text="发车地址 :"]/../*[@class="android.view.ViewGroup"][1]/*[@class="android.widget.TextView"]').text
+                    print("发车地址：", text4)
+                    return self.is_chinses(text4)
+                else:
+                    print("发车地址：", text3)
+                    return self.is_chinses(text3)
 
     # 判断联系电话
     def is_phone(self):
         try:
             # 如果存在联系电话就返回电话号码
-            phone = self.driver.find_element_by_xpath("//*[@text='发车地址 :']/.."
-                                                      "//*[@class='android.widget.TextView'][3]").text
+            phone = self.find_element("xpath", "//*[@text='联系电话 :']/../..//*[@class='android.widget.TextView'][4]").text
             print('联系电话:', phone)
             return self.is_number(phone)
         except:
-            # 不存在联系电话
-            print('不存在联系电话')
-            return True
+            try:
+                phone = self.find_element("xpath","//*[@text='联系电话 :']/../..//*[@class='android.widget.TextView'][3]").text
+                print('联系电话:', phone)
+                return self.is_number(phone)
+            except:
+                # 不存在联系电话
+                print('不存在联系电话')
+                return True
 
     # 取消订单
     def cancal_order(self):
@@ -218,15 +231,10 @@ class SearchOrder(Base):
         # 点击确定
         self.click_element('xpath', "//*[@resource-id='android:id/button1']")
         # result1 = self.find_toast("解锁失败，稍后系统会自动解锁新订单")
-        return self.find_toast("订单取消")
-        # if result:
-        #     print("订单取消成功")
-        #     return result  # 返回toast
-        # else:
-        #     print("取消订单失败")
-        #     self.driver.back()
-        #     # 点击预订
-        #     self.click_element("xpath", "//*[@text='预订']/../*[@class='android.view.ViewGroup']")
-        #     return SearchOrder.isexit_order(self)
-
-
+        result = self.find_toast("订单取消")
+        if result:
+            print("订单取消成功")
+            return True  # 返回toast
+        else:
+            print("取消订单失败")
+            return False

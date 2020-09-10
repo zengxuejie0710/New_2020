@@ -10,11 +10,13 @@ def get_root_dir():
 
 with open(get_root_dir() + '/datas/yxtx_data.yaml', encoding="utf-8")as f:
     testdata = yaml.safe_load(f)
-    city = testdata.keys()
-    start_end = testdata.values()
+    # s = testdata["one"].keys()
+    # v = testdata["one"].values()
 
-
-
+    city = list(testdata.keys())
+    start_end = list(testdata.values())
+    print(city)
+    print(start_end)
 
 @allure.feature("YXTX测试用例")
 class TestSearchReservation:
@@ -27,7 +29,7 @@ class TestSearchReservation:
         self.app.stop()
 
     @allure.story("始发站-到达站")
-    @pytest.mark.parametrize("start,end",testdata,ids=city)
+    @pytest.mark.parametrize("start,end",start_end,ids=city)
     def test01(self,start,end,):
         """
         用例描述：
@@ -43,8 +45,10 @@ class TestSearchReservation:
         :param end:
         :return:
         """
-        try:
 
+        try:
+            with allure.step("始发站--->到达站"):
+                print(start + '--->' + end)
             with allure.step("进入app首页"):
                 first_step = self.app.goto_index()
             with allure.step("判断是否存在未支付的订单"):
@@ -74,5 +78,4 @@ class TestSearchReservation:
             print(u"异常原因%s" % msg)
             self.app.save_image_to_allure()
             raise
-
 
